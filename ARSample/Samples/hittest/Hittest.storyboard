@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AxG-xV-90c">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hittest View Controller-->
+        <scene sceneID="nCS-zG-MmF">
+            <objects>
+                <viewController id="AxG-xV-90c" customClass="HittestViewController" customModule="ARSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rbR-yI-Lwf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EbS-yv-d57">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="f7M-kX-cpD" appends="YES" id="Xzc-Fz-D8Q"/>
+                                </connections>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeY-nU-M1N">
+                                <rect key="frame" x="161.5" y="632" width="91" height="30"/>
+                                <state key="normal" title="toy_drummer"/>
+                                <connections>
+                                    <action selector="tap_toy_drummer:" destination="AxG-xV-90c" eventType="touchUpInside" id="t1Z-xs-8Yc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbC-j7-Q7p">
+                                <rect key="frame" x="144.5" y="712" width="125" height="30"/>
+                                <state key="normal" title="toy_robot_vintage"/>
+                                <connections>
+                                    <action selector="toy_robot_vintage:" destination="AxG-xV-90c" eventType="touchUpInside" id="3NX-ed-Tpg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IqB-YV-cm1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IqB-YV-cm1" firstAttribute="trailing" secondItem="EbS-yv-d57" secondAttribute="trailing" id="2ow-Ff-B3W"/>
+                            <constraint firstItem="IqB-YV-cm1" firstAttribute="bottom" secondItem="EbS-yv-d57" secondAttribute="bottom" id="7nh-Nc-XUU"/>
+                            <constraint firstItem="EbS-yv-d57" firstAttribute="leading" secondItem="IqB-YV-cm1" secondAttribute="leading" id="SPT-ch-HVs"/>
+                            <constraint firstItem="SbC-j7-Q7p" firstAttribute="centerX" secondItem="rbR-yI-Lwf" secondAttribute="centerX" id="WoO-GU-mYI"/>
+                            <constraint firstItem="SbC-j7-Q7p" firstAttribute="top" secondItem="qeY-nU-M1N" secondAttribute="bottom" constant="50" id="cW1-xl-8RT"/>
+                            <constraint firstItem="IqB-YV-cm1" firstAttribute="bottom" secondItem="qeY-nU-M1N" secondAttribute="bottom" constant="200" id="fSm-Rf-9rL"/>
+                            <constraint firstItem="EbS-yv-d57" firstAttribute="top" secondItem="rbR-yI-Lwf" secondAttribute="top" id="msu-o1-XJm"/>
+                            <constraint firstItem="qeY-nU-M1N" firstAttribute="centerX" secondItem="rbR-yI-Lwf" secondAttribute="centerX" id="rrV-H4-ZgM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="EbS-yv-d57" id="qhY-mA-RBp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0H-w4-kfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="f7M-kX-cpD">
+                    <connections>
+                        <action selector="tapped:" destination="AxG-xV-90c" id="pfi-zW-2tD"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-339.13043478260875" y="162.72321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

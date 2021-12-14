@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rp6-ic-diF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--World Map View Controller-->
+        <scene sceneID="uWg-Et-2yS">
+            <objects>
+                <viewController id="rp6-ic-diF" customClass="ARWorldMapViewController" customModule="ARSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J3w-wX-4gq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olW-8k-VsZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XkU-WJ-Tpo" appends="YES" id="Gig-Q9-cYT"/>
+                                </connections>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ie-lY-Gwz">
+                                <rect key="frame" x="172" y="712" width="70" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="4HF-Em-9nt"/>
+                                    <constraint firstAttribute="height" constant="50" id="aYC-b4-lfN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="save_worldmap:" destination="rp6-ic-diF" eventType="touchUpInside" id="9IU-Be-59U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8n-sw-Vrs">
+                                <rect key="frame" x="172" y="782" width="70" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9n5-pC-pB3"/>
+                                    <constraint firstAttribute="width" constant="70" id="Xbb-AE-hTP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="load_worldmap:" destination="rp6-ic-diF" eventType="touchUpInside" id="y4S-Pv-mhu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOM-Qv-G7W">
+                                <rect key="frame" x="324" y="54" width="70" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="U8O-v9-hRv"/>
+                                    <constraint firstAttribute="height" constant="50" id="hgx-Hv-NfM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="rp6-ic-diF" eventType="touchUpInside" id="SD1-EM-SZr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X2P-Kb-QfU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X2P-Kb-QfU" firstAttribute="bottom" secondItem="olW-8k-VsZ" secondAttribute="bottom" id="BM3-Bj-l3g"/>
+                            <constraint firstItem="X2P-Kb-QfU" firstAttribute="trailing" secondItem="olW-8k-VsZ" secondAttribute="trailing" id="LGA-Gh-hnW"/>
+                            <constraint firstItem="1ie-lY-Gwz" firstAttribute="centerX" secondItem="J3w-wX-4gq" secondAttribute="centerX" id="N3c-U0-vvw"/>
+                            <constraint firstItem="XOM-Qv-G7W" firstAttribute="top" secondItem="X2P-Kb-QfU" secondAttribute="top" constant="10" id="R99-eH-Y1V"/>
+                            <constraint firstItem="X2P-Kb-QfU" firstAttribute="bottom" secondItem="1ie-lY-Gwz" secondAttribute="bottom" constant="100" id="Z6G-wF-oQF"/>
+                            <constraint firstItem="olW-8k-VsZ" firstAttribute="leading" secondItem="X2P-Kb-QfU" secondAttribute="leading" id="ZWc-VC-5Pb"/>
+                            <constraint firstItem="X2P-Kb-QfU" firstAttribute="bottom" secondItem="u8n-sw-Vrs" secondAttribute="bottom" constant="30" id="d8M-oH-b5A"/>
+                            <constraint firstItem="olW-8k-VsZ" firstAttribute="top" secondItem="J3w-wX-4gq" secondAttribute="top" id="dit-kN-rbb"/>
+                            <constraint firstItem="X2P-Kb-QfU" firstAttribute="trailing" secondItem="XOM-Qv-G7W" secondAttribute="trailing" constant="20" id="eu7-Qz-qHG"/>
+                            <constraint firstItem="u8n-sw-Vrs" firstAttribute="top" secondItem="1ie-lY-Gwz" secondAttribute="bottom" constant="20" id="lqQ-7D-VvW"/>
+                            <constraint firstItem="u8n-sw-Vrs" firstAttribute="centerX" secondItem="J3w-wX-4gq" secondAttribute="centerX" id="rsP-A4-c12"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="load_button" destination="u8n-sw-Vrs" id="gBX-VO-ect"/>
+                        <outlet property="save_button" destination="1ie-lY-Gwz" id="q7h-vV-oED"/>
+                        <outlet property="sceneView" destination="olW-8k-VsZ" id="qdQ-r0-3ro"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="no4-Dk-SuA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XkU-WJ-Tpo">
+                    <connections>
+                        <action selector="Button_tapped:" destination="rp6-ic-diF" id="QXW-ek-1ZI"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
